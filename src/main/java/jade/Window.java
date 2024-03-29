@@ -18,8 +18,8 @@ public class Window {
     private long glfwWindow;
     LevelEditorScene level = new LevelEditorScene();
     private Window(){
-        this.width = 1920;
-        this.height = 1080;
+        this.width = 1280;
+        this.height = 720;
         this.title = "Graphics";
     }
 

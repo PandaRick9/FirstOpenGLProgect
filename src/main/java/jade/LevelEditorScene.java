@@ -78,7 +78,7 @@ public class LevelEditorScene extends Scene{
         defaultShader.use();
 
         glBindVertexArray(vaoID);
-        glUniform2f(glGetUniformLocation(defaultShader.getShaderProgramID(),"resolution"), 1920,1080);
+        glUniform2f(glGetUniformLocation(defaultShader.getShaderProgramID(),"resolution"), 1280,720);
         glUniform1f(glGetUniformLocation(defaultShader.getShaderProgramID(),"time"), (float) glfwGetTime());
 
         glEnableVertexAttribArray(0);
