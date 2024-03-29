@@ -6,6 +6,7 @@ import renderer.Shader;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
+import static org.lwjgl.glfw.GLFW.glfwGetTime;
 import static org.lwjgl.opengl.ARBVertexArrayObject.glBindVertexArray;
 import static org.lwjgl.opengl.ARBVertexArrayObject.glGenVertexArrays;
 import static org.lwjgl.opengl.GL20.*;
@@ -77,6 +78,8 @@ public class LevelEditorScene extends Scene{
         defaultShader.use();
 
         glBindVertexArray(vaoID);
+        glUniform2f(glGetUniformLocation(defaultShader.getShaderProgramID(),"resolution"), 1920,1080);
+        glUniform1f(glGetUniformLocation(defaultShader.getShaderProgramID(),"time"), (float) glfwGetTime());
 
         glEnableVertexAttribArray(0);
         glEnableVertexAttribArray(1);

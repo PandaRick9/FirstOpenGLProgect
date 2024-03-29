@@ -105,4 +105,8 @@ public class Shader {
     public void detach(){
         glUseProgram(0);
     }
+
+    public int getShaderProgramID() {
+        return shaderProgramID;
+    }
 }
