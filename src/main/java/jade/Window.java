@@ -3,12 +3,12 @@ package jade;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
-import org.lwjgl.opengl.GL11C;
+
 
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL11C.GL_TRIANGLES;
+
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
@@ -18,8 +18,8 @@ public class Window {
     private long glfwWindow;
     LevelEditorScene level = new LevelEditorScene();
     private Window(){
-        this.width = 640;
-        this.height = 480;
+        this.width = 1920;
+        this.height = 1080;
         this.title = "Graphics";
     }
 
@@ -69,12 +69,6 @@ public class Window {
         while(!glfwWindowShouldClose(glfwWindow)){
             //Poll event
             glfwPollEvents();
-            /*glBegin(GL_TRIANGLES);
-            glVertex2f(0.0f,1.0f);
-            glVertex2f(1.0f,-1.0f);
-            glVertex2f(-1.0f,-1.0f);
-            glEnd();*/
-            //glColor3b((byte) 1,(byte)1,(byte)1);
 
 
             glClearColor(1.0f,0.6f,0.3f,1.0f);
